@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.shade {
+  position: fixed;
+  background: #01aa35;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 200;
+  transition: transform 1s ease; }
+  .shade.active {
+    transform: scale(0, 0); }
+  .shade h1 {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 20px;
+    line-height: 300px;
+    text-align: center;
+    color: white;
+    transition: 2s;
+    font-size: 60px; }
+    .shade h1.active {
+      text-shadow: 0 0 .1em, 0 0 .3em; }
+  .shade .start {
+    width: 350px;
+    height: 200px;
+    background: url(12.png) no-repeat center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; }
+  .shade .snake {
+    width: 350px;
+    height: 200px;
+    background: url(13.png) no-repeat center center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 50px;
+    transform: translate3d(-500px, 0, 0);
+    animation: move 5s ease 0s infinite both; }
+
+@keyframes move {
+  0% {
+    transform: translate3d(-500px, 0, 0); }
+  50% {
+    transform: translate3d(200px, 0, 0); }
+  100% {
+    transform: translate3d(1000px, 0, 0); } }
+
+.box {
+  position: absolute;
+  background: #01aa35;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; }
+  .box .over {
+    width: 400px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1000;
+    text-align: center;
+    line-height: 200px;
+    font-size: 50px;
+    color: white;
+    text-shadow: 0 1px #d9d9d9, 0 2px #cccccc, 0 3px #bfbfbf, 0 4px #b3b3b3, 0 5px #a6a6a6;
+    transform: scale(0, 0);
+    transition: transform .8s ease; }
+    .box .over.active {
+      transform: scale(1, 1); }
+    .box .over span {
+      display: block;
+      width: 100px;
+      height: 40px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      bottom: 10px;
+      border-radius: 8px;
+      font-size: 24px;
+      line-height: 40px;
+      background: rgba(255, 255, 0, 0.3);
+      color: #ffc;
+      text-shadow: 0 0 .1em, 0 0 .3em;
+      cursor: pointer; }
+
+.box .btn1 {
+  width: 200px;
+  height: 80px;
+  border-radius: 8px;
+  background: url(14.png) no-repeat center center/auto 80px;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  bottom: 180px;
+  margin-left: 350px;
+  transition: transform .3s ease; }
+  .box .btn1.active {
+    tranform: scale(1.2, 1.2); }
+
+.btn2 {
+  width: 200px;
+  height: 80px;
+  border-radius: 8px;
+  background: url(15.png) no-repeat center center/auto 80px;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  bottom: 100px;
+  margin-left: 350px;
+  transition: transform .3s ease; }
+  .btn2.active {
+    tranform: scale(1.2, 1.2); }
+
+.inner {
+  width: 600px;
+  height: 600px;
+  /*border: 1px solid red;*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: url(1.png); }
+  .inner .bk1 {
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    background: url(22.png) no-repeat center top; }
+
+.block {
+  width: 30px;
+  height: 30px;
+  float: left; }
+
+.she {
+  background: url(5.png); }
+
+.she1 {
+  background: url(4.png); }
+
+.food {
+  width: 30px;
+  height: 30px;
+  float: left;
+  background: url(6.png); }
+
+.mark {
+  width: 300px;
+  height: 200px;
+  background: url(33.png) no-repeat center center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: 300px;
+  text-align: center;
+  line-height: 200px;
+  color: #fff;
+  font-size: 40px; }
+
+.box1 {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  margin-left: -650px;
+  width: 300px;
+  height: 500px;
+  padding-left: 80px;
+  padding-top: 80px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #fff;
+  line-height: 2em;
+  text-align: left;
+  box-shadow: 0 0 0 5px rgba(0, 255, 0, 0.5); }
+  .box1 h1 {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    text-align: left; }
